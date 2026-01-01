@@ -19,6 +19,13 @@
 </head>
 
 <body>
+    <!-- MUSIC OVERLAY START -->
+<div id="musicOverlay">Tap anywhere 💖</div>
+
+<audio id="bgMusic" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+</audio>
+<!-- MUSIC OVERLAY END -->
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
@@ -136,16 +143,29 @@
                         <img src="cute1.png" alt="">
                     </div>
                 </div>
+                <div class="card1">
+    <div class="userImg">
+        <img src="images/unnamed.png" alt="">
+    </div>
+
+    <h3>Happy Birthday</h3>
+
+    <!-- SWIPE HINT (ONLY ON FIRST PAGE) -->
+    <div class="swipe-hint">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <span>Swipe</span>
+    </div>
+</div>
                 <div class="card2">
                     <div class="card2-content">
-                        <h3>To You!</h3>
-                        <h2>Happy birthday 🥳🎂🥳 chanda the day you come into my life I was not really much attached to
-                            you but day by day you became close to my heart . And now you are truly my younger sister. I
-                            wish I could remove some of the pain from your life which you are bearing alone. But you're
-                            always welcome 🤗 you can talk anytime you want to talk specially those which you can't say
-                            to others. And this year your all dreams come true . I wish that your
-                            brother could wish you but if couldn't wish on him behalf I am wishing you happy birthday
-                            🎈🎂🎈 sana . Don't be Sad ok be happy 😌
+                        <h3>To my cutie 😘!</h3>
+                        <h2>Happy Birthday, madam ji 🎉🎂🎉
+
+                            You came into my life when I least expected it, and in such a short time and with just a few meetings, you became one of my most favorite people.
+                            
+                            May God make all your wishes come true this year and fill your life with endless joy and happiness.
+                            
+                            I hope our bond stays the same forever, and that we continue to create new and everlasting memories together 💗
                         </h2>
 
                         <div class="imageCute2">
@@ -258,6 +278,16 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+    // MUSIC START
+const overlay = document.getElementById("musicOverlay");
+const music = document.getElementById("bgMusic");
+
+overlay.addEventListener("click", () => {
+    music.play();
+    overlay.style.display = "none";
+});
+// MUSIC END
 </script>
+
 
 </html>
